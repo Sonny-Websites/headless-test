@@ -1,3 +1,7 @@
+# Added by codex-action.
+model_provider = "codex-action-responses-proxy"
+
+
 # Codex home config for wix-headless-factory bootstrap runs.
 # Mounted via codex-action `codex-home` input.
 
@@ -16,3 +20,13 @@ web_search = true
 # [mcp_servers.wix]
 # command = "npx"
 # args = ["-y", "@wix/wix-mcp-remote@latest"]
+
+
+# Added by codex-action.
+[model_providers.codex-action-responses-proxy]
+name = "Codex Action Responses Proxy"
+base_url = "http://127.0.0.1:38499/v1"
+wire_api = "responses"
+
+[projects."/home/runner/work/headless-test/headless-test"]
+trust_level = "trusted"
